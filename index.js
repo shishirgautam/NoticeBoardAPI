@@ -7,7 +7,7 @@ var userController = require('./controllers/User_Controller.js')
 app.use(bodyParser.urlencoded({extended:true}))
 
 
-app.post('/registration',userController.registerUser)
+app.post('/registration',userController.validation,userController.registerUser)
 
 
 app.post('/login')
